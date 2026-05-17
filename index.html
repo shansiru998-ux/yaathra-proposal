@@ -119,27 +119,62 @@
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
-  .artists-strip {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    gap: 2px;
-    opacity: 0.18;
-  }
-
-  .artist-col {
-    flex: 1;
+ /* ── PROFESSIONAL IMAGE ALIGNMENT FIX ── */
+.artist-avatar img,
+.producer-avatar img,
+.compere-avatar img,
+.team-avatar img {
+    width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #1a1a2e 0%, #0d0d18 100%);
-    position: relative;
-    overflow: hidden;
-  }
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.4s ease;
+}
 
-  .artist-col::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 30%, rgba(5,5,10,0.9) 100%);
+.artist-avatar img:hover,
+.producer-avatar img:hover,
+.compere-avatar img:hover,
+.team-avatar img:hover {
+    transform: scale(1.03);
+}
+
+.artist-avatar img,
+.producer-avatar img,
+.compere-avatar img {
+    border-radius: 50%;
+}
+
+.team-avatar img {
+    border-radius: 14px;
+}
+
+/* Better image container alignment */
+.artist-avatar,
+.producer-avatar,
+.compere-avatar,
+.team-avatar {
+    overflow: hidden;
+    position: relative;
+    background: #111;
+}
+
+/* Artist image optimization */
+.artist-avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 2px solid rgba(201,168,76,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Producer image optimization */
+.producer-avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 2px solid rgba(201,168,76,0.5);
+}
   }
 
   .hero-content { position: relative; z-index: 2; }
