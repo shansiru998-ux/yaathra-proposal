@@ -174,7 +174,13 @@
     height: 95px;
     border-radius: 50%;
     border: 2px solid rgba(201,168,76,0.5);
-    background-color: #141428;        /* Adds a matching background color if there are gaps */
+}
+
+/* Make sure the image centers and adjusts the zoom level */
+.producer-avatar img {
+    object-fit: cover !important;
+    object-position: center center;   /* Perfectly centers her face */
+    transform: scale(1.0);            /* Change to 0.9 if you need to zoom out a tiny bit */
 }
 
 /* Force Janaki's image to fit completely inside the circle */
