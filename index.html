@@ -168,25 +168,36 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* Producer image optimization */
+/* Producer image optimization - Premium Edition */
 .producer-avatar {
     width: 95px;
     height: 95px;
     border-radius: 50%;
-    border: 2px solid rgba(201,168,76,0.5);
+    border: 2px solid rgba(201,168,76,0.6); /* Slightly sharper gold accent */
+    background: #141428;                    /* Sleek dark background */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Premium soft depth drop-shadow */
+    margin: 0 auto 1rem auto;               /* Perfectly centers the circle in the card */
+    overflow: hidden;                       /* Ensures absolutely no leakage outside the circle */
+    display: flex;                          /* Flex layout to lock contents exactly centered */
+    align-items: center;
+    justify-content: center;
 }
 
-/* Make sure the image centers and adjusts the zoom level */
+/* Forces Janaki's image to scale and align flawlessly inside the circle */
 .producer-avatar img {
-    object-fit: cover !important;
-    object-position: center center;   /* Perfectly centers her face */
-    transform: scale(1.0);            /* Change to 0.9 if you need to zoom out a tiny bit */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;           /* Cuts perfectly to fill the frame elegantly */
+    object-position: center top;            /* Keeps her face framed properly from the top */
+    display: block;
+    transform: scale(1.0);                  /* Clean baseline sizing */
+    transition: transform 0.3s ease;        /* Smooth premium micro-interaction on hover */
 }
 
-/* Force Janaki's image to fit completely inside the circle */
-.producer-avatar img {
-    object-fit: contain !important;
-    padding: 6px;                     /* Gives it a clean border gap inside the frame */
+/* Optional premium hover effect when someone passes over her card */
+.producer-card:hover .producer-avatar img {
+    transform: scale(1.08);                 /* Elegant dynamic subtle zoom */
+}
 }
   }
 
