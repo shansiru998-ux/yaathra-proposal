@@ -173,9 +173,20 @@
     width: 95px;
     height: 95px;
     border-radius: 50%;
-    border: 2px solid rgba(201,168,76,0.5);
+    border: 2px solid rgba(201, 168, 76, 0.5);
+    
+    /* ADD THESE TWO LINES */
+    overflow: hidden; /* This crops the image into a perfect circle */
+    padding: 0;       /* Ensures no accidental inner spacing is pushing the image down */
 }
-  }
+
+/* ADD THIS NEW BLOCK BELOW IT */
+.producer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Forces the image to fill the circle without stretching */
+    object-position: center;   /* Centers the face perfectly */
+}
 
   .hero-content { position: relative; z-index: 2; }
 
