@@ -1654,24 +1654,28 @@
 
 <div class="divider"></div>
 
-<!-- EVENT TEAM -->
-<section id="team">
+<!-- ── PRODUCER’S PAST EVENTS (WITH VIDEO) ── -->
+<section id="producers-events">
   <div class="container">
-    <p class="section-label reveal">The Team Behind It</p>
-    <h2 class="section-title reveal">Event Team</h2>
-    <div class="gold-line reveal"></div>
-    <div class="team-card reveal">
-      <div class="team-avatar">PP</div>
-      <div>
-        <div class="team-name">Prabath Pathiraja</div>
-        <div class="team-role">Director — Urban Circus (Pvt) Ltd</div>
-        <p class="team-bio">A veteran in the event management and planning industry who started small and built his way up through dedication and vision. Today, he leads his own company, delivering innovative and memorable experiences while setting new standards in the field. His journey reflects passion, perseverance, and a deep commitment to excellence in creating world-class events.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    
+    <div class="section-label">Showcase</div>
+    <h2 class="section-title gold">PRODUCER’S PAST EVENTS</h2>
+    <div class="gold-line"></div>
 
-<div class="divider"></div>
+    <div class="event-video">
+      <video controls autoplay muted loop playsinline poster="videos/thumbnail.jpg">
+        <source src="videos/PRODUCER’S PAST EVENTS.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div> </section> ```
+
+### What was fixed:
+1. **Cleaned the `<source>` tag:** Removed the broken iframe attributes and inserted the exact name of your video file (`PRODUCER’S PAST EVENTS.mp4`). 
+2. **Path Setup:** I assumed your video and thumbnail are inside a `videos/` folder based on your setup. If they are in the same folder as your HTML file, just remove `videos/` from the paths.
+3. **Closed the Tags:** Added `</div>` and `</section>` at the bottom so your page structure doesn't break. 
+4. **Kept Attributes:** Kept your `autoplay muted loop playsinline` settings, which is the perfect combination to make the event video automatically play smoothly on mobile devices and desktop browsers alike.
   
 <!-- PAST EVENTS -->
 <section id="events">
