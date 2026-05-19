@@ -1679,7 +1679,98 @@
         Your browser does not support the video tag.
       </video>
     </div>
+<div class="event-gallery">
+      
+      <div class="gallery-card">
+        <div class="card-image-wrapper">
+          <img src="images/devi_kusumasana.jpg" alt="Devi Kusumasana" class="gallery-img">
+          <div class="card-overlay">
+            <h3 class="movie-title">Devi Kusumasana</h3>
+          </div>
+        </div>
+      </div>
 
+      <div class="gallery-card">
+        <div class="card-image-wrapper">
+          <img src="images/rani.jpg" alt="Rani" class="gallery-img">
+          <div class="card-overlay">
+            <h3 class="movie-title">Rani</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> 
+</section>
+
+<style>
+  /* Gallery Container Grid */
+  .event-gallery {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Individual Card Styling */
+  .gallery-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 48%; /* Adjusts dynamically for two images side-by-side */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Subtle gold border */
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2); /* Soft gold glow */
+  }
+
+  /* Image Wrapper & Overlay Effects */
+  .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Keeps standard widescreen proportion like your concert image */
+    overflow: hidden;
+  }
+
+  /* If the movie poster is a vertical poster (like Devi Kusumasana) instead of a horizontal banner, 
+     change aspect-ratio to 2 / 3 or remove it entirely to let the image dictate height. */
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Dark text protection gradient gradient over image */
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    padding: 20px 15px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .movie-title {
+    color: #fff;
+    font-family: 'Poppins', sans-serif; /* Fallback to standard clean font */
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+</style>
   </div> </section> ```
 
   
